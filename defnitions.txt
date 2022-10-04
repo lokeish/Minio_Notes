@@ -2,7 +2,8 @@ Versioning:
 It provides data protection, it also serves as the foundation for powerful features like Object Locking,
 Immutability, Tiering and Life Cycle management.
 
-Minio Assigns a unique version ID to each version of object. Application can specify a version id at any time to access the point-in-time snapshot of that object.
+Minio Assigns a unique version ID to each version of object. Application can specify a version id at any
+time to access the point-in-time snapshot of that object.
 
 It eliminates the need of snapshoting
 
@@ -10,8 +11,9 @@ Ensures that object remain available across a range of failures. Including those
 
 Versioning is enabled at bucket level.
 
-It protects from Unintentional overwrites or deletions, this is performed by using the concept of delete marker.  When versioned object is deleted it is not deleted permanently,
- minio assings delete marker to that particular object. If we remove delete marker we can recover that file.
+It protects from Unintentional overwrites or deletions, this is performed by using the concept of delete marker.
+When versioned object is deleted it is not deleted permanently,
+minio assings delete marker to that particular object. If we remove delete marker we can recover that file.
 
 Minio supports threee types:
 1. Versioning enabled
@@ -26,7 +28,9 @@ This is acheived by object retention, Governance Mode, Complaince Mode and Legal
 
 Governance Mode: It is used to protect objects from the standard users.
 
-Complaince Mode: It more restrictive and cannot be undone within the retention period. As a result, Complaince Mode ensures that no one, including the root user, can delete an object during its retention period.
+Complaince Mode: It more restrictive and cannot be undone within the retention period. As a result,
+ Complaince Mode ensures that no one, including the root user, can delete an object during its retention period.
 
-Legal Mode: Legal hold offers the same WORM protection as the retention period, but it has no expiry date. It is an indefinitive hold that can only be removed by an authorized user. Can create versioned objects on top of legal hold or rentention,
+Legal Mode: Legal hold offers the same WORM protection as the retention period, but it has no expiry date.
+It is an indefinitive hold that can only be removed by an authorized user. Can create versioned objects on top of legal hold or rentention,
 but copy of file from that path does not carry forward the legal hold or rentention.
